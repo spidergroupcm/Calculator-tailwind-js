@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="calculator bg-white p-6 rounded-lg shadow-lg w-80">
+        <input id="display" class="w-full h-12 mb-4 text-right px-4 text-2xl border border-gray-300 rounded" type="text" disabled />
+        
+        <div class="grid grid-cols-4 gap-4">
+            
+            <button onclick="clearDisplay()" class="bg-gray-200 text-black p-4 rounded">C</button>
+            <button onclick="deleteLast()" class="bg-gray-200 text-black p-4 rounded">DEL</button>
+            <button onclick="appendCharacter('%')" class="bg-gray-200 text-black p-4 rounded">%</button>
+            <button onclick="appendCharacter('/')" class="bg-blue-500 text-white p-4 rounded">/</button>
+            <button onclick="appendCharacter('7')" class="bg-gray-200 text-black p-4 rounded">7</button>
+            <button onclick="appendCharacter('8')" class="bg-gray-200 text-black p-4 rounded">8</button>
+            <button onclick="appendCharacter('9')" class="bg-gray-200 text-black p-4 rounded">9</button>
+            <button onclick="appendCharacter('*')" class="bg-blue-500 text-white p-4 rounded">*</button>
+            <button onclick="appendCharacter('4')" class="bg-gray-200 text-black p-4 rounded">4</button>
+            <button onclick="appendCharacter('5')" class="bg-gray-200 text-black p-4 rounded">5</button>
+            <button onclick="appendCharacter('6')" class="bg-gray-200 text-black p-4 rounded">6</button>
+            <button onclick="appendCharacter('-')" class="bg-blue-500 text-white p-4 rounded">-</button>
+            <button onclick="appendCharacter('1')" class="bg-gray-200 text-black p-4 rounded">1</button>
+            <button onclick="appendCharacter('2')" class="bg-gray-200 text-black p-4 rounded">2</button>
+            <button onclick="appendCharacter('3')" class="bg-gray-200 text-black p-4 rounded">3</button>
+            <button onclick="appendCharacter('+')" class="bg-blue-500 text-white p-4 rounded">+</button>
+            <button onclick="appendCharacter('0')" class="bg-gray-200 text-black p-4 col-span-2 rounded">0</button>
+            <button onclick="appendCharacter('.')" class="bg-gray-200 text-black p-4 rounded">.</button>
+            <button onclick="calculate()" class="bg-green-500 text-white p-4 rounded">=</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
